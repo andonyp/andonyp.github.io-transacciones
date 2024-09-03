@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Transacción</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="/Imagenes/logo.jpeg" alt="Logo" id="logo">
+            <h2>Formulario de Transacción</h2>
+        </header>
+        <form id="formulario-ive">
+            <div class="form-grid">
+                <!-- Columna 1: Datos de la transacción -->
+                <div class="form-column">
+                    <h3>Datos de la Transacción</h3>
+                    <div class="form-group">
+                        <label for="fecha-transaccion">Fecha de Transacción</label>
+                        <input type="date" id="fecha-transaccion" name="fecha-transaccion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="numero-cuenta">Número de Cuenta</label>
+                        <input type="text" id="numero-cuenta" name="numero-cuenta" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="caracteristicas-transaccion">Características de la Transacción</label>
+                        <select id="caracteristicas-transaccion" name="caracteristicas-transaccion" required>
+                            <option value="TU">TU</option>
+                            <option value="TM">TM</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo-cuenta">Tipo de Cuenta</label>
+                        <select id="tipo-cuenta" name="tipo-cuenta" required>
+                            <option value="">Seleccione tipo de cuenta</option>
+                            <option value="AF">AF - Cuenta de alto flujo</option>
+                            <option value="CC">CC - Cuenta colectora</option>
+                            <option value="OT">OT - Otras cuentas </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo-transaccion">Tipo de Transacción</label>
+                        <select id="tipo-transaccion" name="tipo-transaccion" required>
+                            <option value="101">101 - Depósito en cuenta de monetarios</option>
+                            <option value="102">102 - Depósito en cuenta de ahorro</option>
+                            <option value="103">103 - Cambio de divisas</option>
+                            <option value="104">104 - Depósito por apertura de cuenta</option>
+                            <option value="105">105 - Venta de cheque de caja</option>
+                            <option value="106">106 - Depósito a plazo fijo</option>
+                            <option value="107">107 - Venta de cheques de viajero (Travel check)</option>
+                            <option value="108">108 - Colocación de obligaciones</option>
+                            <option value="109">109 - Recepción de amortización de préstamo y/o intereses</option>
+                            <option value="110">110 - Recepción de amortización de carta de crédito</option>
+                            <option value="111">111 - Recepción de amortización de tarjeta de crédito y/o intereses</option>
+                            <option value="112">112 - Cobros por cuenta ajena</option>
+                            <option value="113">113 - Ingreso por transferencia nacional</option>
+                            <option value="114">114 - Ingreso por transferencia internacional</option>
+                            <option value="115">115 - Depósito monetario fondo de pensiones</option>
+                            <option value="116">116 - Pago de prima</option>
+                            <option value="117">117 - Ingreso por almacenaje</option>
+                            <option value="118">118 - Ingreso por recargos en almacenaje</option>
+                            <option value="119">119 - Ingreso por pagos efectuados por cuenta ajena</option>
+                            <option value="120">120 - Cobro de impuestos</option>
+                            <option value="121">121 - Ingreso por manejo de mercaderías</option>
+                            <option value="122">122 - Venta directa de mercaderías</option>
+                            <option value="123">123 - Ingreso por remates de mercaderías</option>
+                            <option value="125">125 - Venta de acciones</option>
+                            <option value="126">126 - Cobro de comisiones</option>
+                            <option value="127">127 - Ingresos por ventas de especies fiscales y postales</option>
+                            <option value="128">128 - Recepción de anticipo  por viaje al extranjero</option>
+                            <option value="129">129 - Depósitos en garantía</option>
+                            <option value="130">130 - Ingreso por venta de inversiones</option>
+                            <option value="131">131 - Ingreso por venta de bienes muebles e inmuebles</option>
+                            <option value="132">132 - Ingreso por venta de salvamentos</option>
+                            <option value="133">133 - Ingreso por colocacion de reporto</option>
+                            <option value="134">134 - Ingreso por venta en mercado primario</option>
+                            <option value="135">135 - Ingreso por venta en mercado secundario</option>
+                            <option value="136">136 - Ingreso por venta de títulos públicos</option>
+                            <option value="137">137 - Ingreso por venta de acciones</option>
+                            <option value="138">138 - Ingreso por operaciones de futuros</option>
+                            <option value="139">139 - Ingreso por licitaciones</option>
+                            <option value="140">140 - Inversión en moneda nacional</option>
+                            <option value="141">141 - Inversion en moneda Extranjera</option>
+                            <option value="142">142 - Recepción de transferencias via swift</option>
+                            <option value="143">143 - Ingreso por venta de inmuebles propiedad de FHA</option>
+                            <option value="144">144 - Nota de debito</option>
+                            <option value="145">145 - Intereses debitados</option>
+                            <option value="146">146 - Retencion de impuesto a productos financieros</option>
+                            <option value="147">147 - Recepcion de remesas</option>
+                            <option value="999">999 - Otras transacciones</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo-moneda">Tipo de Moneda</label>
+                        <select id="tipo-moneda" name="tipo-moneda" required>
+                            <option value="">Seleccione un tipo de moneda</option>
+                            <option value="USD">US$</option>
+                            <option value="GTQ">GTQ</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="monto-transaccion">Monto de Transacción</label>
+                        <input type="number" id="monto-transaccion" name="monto-transaccion" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo-cambio">Tipo de Cambio</label>
+                        <input type="number" id="tipo-cambio" name="tipo-cambio" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="monto-dolares">Monto en Dólares</label>
+                        <input type="number" id="monto-dolares" name="monto-dolares" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="municipio">Agencia se realiza transaccion (para municipio)</label>
+                        <select id="municipio" name="municipio" required>
+                            <option value="">Seleccione agencia donde se realiza transaccion</option>
+                            <option value="0701">Argueta</option>
+                            <option value="0701">Solola</option>
+                            <option value="0705">Nahuala</option>
+                            <option value="0801">Totonicapan</option>
+                            <option value="0901">Las Americas</option>
+                            <option value="0710">Panajachel</option>
+                            <option value="0901">La Independencia</option>
+                            <option value="0704">Santa Lucia</option>
+                            <option value="0108">Roosevelt</option>
+                            <option value="0401">Andaria</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="codigo-agencia">Código de Agencia</label>
+                        <select id="codigo-agencia" name="codigo-agencia" required>
+                            <option value="">Seleccione una agencia</option>
+                            <option value="1">1 - Central Argueta</option>
+                            <option value="2">2 - Sololá</option>
+                            <option value="3">3 - Nahuala</option>
+                            <option value="4">4 - Totonicapan</option>
+                            <option value="5">5 - Las americas</option>
+                            <option value="6">6 - Panajachel</option>
+                            <option value="7">7 - La Independencia</option>
+                            <option value="8">8 - Santa Lucia</option>
+                            <option value="9">9 - Roosevelt</option>
+                            <option value="10">10 - Andaria</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion-transaccion">Finalidad de la Transacción</label>
+                        <textarea id="descripcion-transaccion" name="descripcion-transaccion" rows="4" required></textarea>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Información del Cliente -->
+                <div class="form-column">
+                    <h3>Información del Cliente</h3>
+                    <div class="form-group">
+                        <label for="tipo-cliente">Tipo de cliente</label>
+                        <select name="tipo-cliente" id="tipo-cliente" required>
+                            <option value="">Seleccione un tipo de persona</option>
+                            <option value="I">Individual</option>
+                            <option value="J">Juridico</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="razon-social">Razon Social</label>
+                        <input type="text" id="razon-social" name="razon-social" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="primer-nombre">Primer Nombre</label>
+                        <input type="text" id="primer-nombre" name="primer-nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="segundo-nombre">Segundo Nombre</label>
+                        <input type="text" id="segundo-nombre" name="segundo-nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido-casada">Apellido Casada</label>
+                        <input type="text" id="apellido-casada" name="apellido-casada" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="primer-apellido">Primer Apellido</label>
+                        <input type="text" id="primer-apellido" name="primer-apellido" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="segundo-apellido">Segundo Apellido</label>
+                        <input type="text" id="segundo-apellido" name="segundo-apellido" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="origen-persona">Origen Persona</label>
+                        <select name="origen-persona" id="origen-persona" required>
+                            <option value="">Seleccione una nacionalidad</option>
+                            <option value="N">Nacional</option>
+                            <option value="E">Extranjera</option>
+                        </select>
+                        </div>
+                    <div class="form-group">
+                        <label for="tipo-identificacion">Tipo de identificacion</label>
+                        <select name="tipo-identificacion" id="tipo-identificacion" required>
+                            <option value="">Selecciona una identificacion</option>
+                            <option value="D">Documento Personal de Identificacion</option>
+                            <option value="P">Pasaporte</option>
+                            <option value="N">Nit</option>
+                            <option value="O">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="otra-identificacion">Otro tipo de identificacion</label>
+                        <textarea id="otra-identificacion" name="otra-identificacion" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="numero-identificacion">Numero de Identificacion</label>
+                        <input type="text" id="numero-identificacion" name="numero-identificacion" required>
+                    </div>
+                </div>
+
+                <!--Informacion de terceros-->
+                <div class="form-column">
+                    <h3>Información de Terceros</h3>
+                    <div class="form-group">
+                        <label for="primer-apellido-tercero">Primer Apellido</label>
+                        <input type="text" id="primer-apellido-tercero" name="primer-apellido-tercero" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="segundo-apellido-tercero">Segundo Apellido</label>
+                        <input type="text" id="segundo-apellido-tercero" name="segundo-apellido-tercero"required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido-casada-tercero">Apellidos Casada</label>
+                        <input type="text" id="apellido-casada-tercero" name="apellido-casada-tercero" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="primer-nombre-tercero">Primer Nombre</label>
+                        <input type="text" id="primer-apellido-tercero" name="primer-nombre-tercero" required>
+                    </div>
+                    <div class="form-group">
+                    <label for="segundo-nombre-tercero">Segundo Nombre</label>
+                    <input type="text" id="segundo-nombre-tercero" name="segundo-nombre-tercero" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo-identificacion-tercero">Tipo de identificacion</label>
+                        <select name="tipo-identificacion-tercero" id="tipo-identificacion-tercero" required>
+                            <option value="">Seleccione una identificacion</option>
+                            <option value="D">Documento Personal de Identificacion</option>
+                            <option value="P">Pasaporte</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="numero-identificacion-tercero">Numero de Identificacion</label>
+                        <input type="text" id="numero-identificacion-tercero" name="numero-identificacion-tercero" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nacionalidad-tercero">Tipo de identificacion</label>
+                        <select name="nacionalidad-tercero" id="nacionalidad-tercero" required>
+                                <option value="">Seleccione una nacionalidad</option>
+                                <option value="AF">Afgano</option>
+                                <option value="AL">Albanés</option>
+                                <option value="DZ">Argelino</option>
+                                <option value="AS">Samoano Estadounidense</option>
+                                <option value="AD">Andorrano</option>
+                                <option value="AO">Angoleño</option>
+                                <option value="AG">Antiguano y Barbudano</option>
+                                <option value="AR">Argentino</option>
+                                <option value="AM">Armenio</option>
+                                <option value="AW">Arubeño</option>
+                                <option value="AU">Australiano</option>
+                                <option value="AT">Austriaco</option>
+                                <option value="AZ">Azerbaiyano</option>
+                                <option value="BS">Bahameño</option>
+                                <option value="BH">Bareiní</option>
+                                <option value="BD">Bangladesí</option>
+                                <option value="BB">Barbadense</option>
+                                <option value="BY">Bielorruso</option>
+                                <option value="BE">Belga</option>
+                                <option value="BZ">Beliceño</option>
+                                <option value="BJ">Beninés</option>
+                                <option value="BM">Bermudeño</option>
+                                <option value="BT">Butanés</option>
+                                <option value="BO">Boliviano</option>
+                                <option value="BA">Bosnioherzegovino</option>
+                                <option value="BW">Botswanés</option>
+                                <option value="BR">Brasileño</option>
+                                <option value="BN">Bruneano</option>
+                                <option value="BG">Búlgaro</option>
+                                <option value="BF">Burkinés</option>
+                                <option value="BI">Burundés</option>
+                                <option value="CV">Caboverdiano</option>
+                                <option value="KH">Camboyano</option>
+                                <option value="CM">Camerunés</option>
+                                <option value="CA">Canadiense</option>
+                                <option value="KY">Caimanés</option>
+                                <option value="CF">Centroafricano</option>
+                                <option value="TD">Chadiano</option>
+                                <option value="CL">Chileno</option>
+                                <option value="CN">Chino</option>
+                                <option value="CO">Colombiano</option>
+                                <option value="KM">Comorense</option>
+                                <option value="CG">Congoleño (Congo-Brazzaville)</option>
+                                <option value="CD">Congoleño (Congo-Kinshasa)</option>
+                                <option value="CR">Costarricense</option>
+                                <option value="HR">Croata</option>
+                                <option value="CU">Cubano</option>
+                                <option value="CY">Chipriota</option>
+                                <option value="CZ">Checo</option>
+                                <option value="DK">Danés</option>
+                                <option value="DJ">Yibutiano</option>
+                                <option value="DM">Dominiqués</option>
+                                <option value="DO">Dominicano</option>
+                                <option value="EC">Ecuatoriano</option>
+                                <option value="EG">Egipcio</option>
+                                <option value="SV">Salvadoreño</option>
+                                <option value="GQ">Ecuatoguineano</option>
+                                <option value="ER">Eritreo</option>
+                                <option value="EE">Estonio</option>
+                                <option value="SZ">Suazi</option>
+                                <option value="ET">Etíope</option>
+                                <option value="FJ">Fiyiano</option>
+                                <option value="FI">Finlandés</option>
+                                <option value="FR">Francés</option>
+                                <option value="GA">Gabonés</option>
+                                <option value="GM">Gambiano</option>
+                                <option value="GE">Georgiano</option>
+                                <option value="DE">Alemán</option>
+                                <option value="GH">Ghanés</option>
+                                <option value="GR">Griego</option>
+                                <option value="GD">Granadino</option>
+                                <option value="GT">Guatemalteco</option>
+                                <option value="GN">Guineano</option>
+                                <option value="GW">Guineano-bisauense</option>
+                                <option value="GY">Guyanés</option>
+                                <option value="HT">Haitiano</option>
+                                <option value="HN">Hondureño</option>
+                                <option value="HU">Húngaro</option>
+                                <option value="IS">Islandés</option>
+                                <option value="IN">Indio</option>
+                                <option value="ID">Indonesio</option>
+                                <option value="IR">Iraní</option>
+                                <option value="IQ">Iraquí</option>
+                                <option value="IE">Irlandés</option>
+                                <option value="IL">Israelí</option>
+                                <option value="IT">Italiano</option>
+                                <option value="JM">Jamaicano</option>
+                                <option value="JP">Japonés</option>
+                                <option value="JO">Jordano</option>
+                                <option value="KZ">Kazajo</option>
+                                <option value="KE">Keniata</option>
+                                <option value="KI">Kiribatiano</option>
+                                <option value="KP">Norcoreano</option>
+                                <option value="KR">Surcoreano</option>
+                                <option value="KW">Kuwaití</option>
+                                <option value="KG">Kirguís</option>
+                                <option value="LA">Laosiano</option>
+                                <option value="LV">Letón</option>
+                                <option value="LB">Libanés</option>
+                                <option value="LS">Lesotense</option>
+                                <option value="LR">Liberiano</option>
+                                <option value="LY">Libio</option>
+                                <option value="LI">Liechtensteiniano</option>
+                                <option value="LT">Lituano</option>
+                                <option value="LU">Luxemburgués</option>
+                                <option value="MG">Malgache</option>
+                                <option value="MW">Malauí</option>
+                                <option value="MY">Malasio</option>
+                                <option value="MV">Maldivo</option>
+                                <option value="ML">Maliense</option>
+                                <option value="MT">Maltés</option>
+                                <option value="MH">Marshalés</option>
+                                <option value="MR">Mauritano</option>
+                                <option value="MU">Mauriciano</option>
+                                <option value="MX">Mexicano</option>
+                                <option value="FM">Micronesio</option>
+                                <option value="MD">Moldavo</option>
+                                <option value="MC">Monegasco</option>
+                                <option value="MN">Mongol</option>
+                                <option value="ME">Montenegrino</option>
+                                <option value="MA">Marroquí</option>
+                                <option value="MZ">Mozambiqueño</option>
+                                <option value="MM">Myanmarense</option>
+                                <option value="NA">Namibio</option>
+                                <option value="NR">Nauruano</option>
+                                <option value="NP">Nepalí</option>
+                                <option value="NL">Neerlandés</option>
+                                <option value="NZ">Neozelandés</option>
+                                <option value="NI">Nicaragüense</option>
+                                <option value="NE">Nigerino</option>
+                                <option value="NG">Nigeriano</option>
+                                <option value="MK">Macedonio</option>
+                                <option value="NO">Noruego</option>
+                                <option value="OM">Omaní</option>
+                                <option value="PK">Pakistaní</option>
+                                <option value="PW">Palauano</option>
+                                <option value="PA">Panameño</option>
+                                <option value="PG">Papú</option>
+                                <option value="PY">Paraguayo</option>
+                                <option value="PE">Peruano</option>
+                                <option value="PH">Filipino</option>
+                                <option value="PL">Polaco</option>
+                                <option value="PT">Portugués</option>
+                                <option value="QA">Catarí</option>
+                                <option value="RO">Rumano</option>
+                                <option value="RU">Ruso</option>
+                                <option value="RW">Ruandés</option>
+                                <option value="KN">Sancristobaleño</option>
+                                <option value="LC">Santalucense</option>
+                                <option value="VC">Sanvicentino</option>
+                                <option value="WS">Samoano</option>
+                                <option value="SM">Sanmarinense</option>
+                                <option value="ST">Santomense</option>
+                                <option value="SA">Saudí</option>
+                                <option value="SN">Senegalés</option>
+                                <option value="RS">Serbio</option>
+                                <option value="SC">Seychelense</option>
+                                <option value="SL">Sierraleonés</option>
+                                <option value="SG">Singapurense</option>
+                                <option value="SK">Eslovaco</option>
+                                <option value="SI">Esloveno</option>
+                                <option value="SB">Salomonense</option>
+                                <option value="SO">Somalí</option>
+                                <option value="ZA">Sudafricano</option>
+                                <option value="SS">Sur sudanés</option>
+                                <option value="ES">Español</option>
+                                <option value="LK">Ceilanés</option>
+                                <option value="SD">Sudanés</option>
+                                <option value="SR">Surinamés</option>
+                                <option value="SE">Sueco</option>
+                                <option value="CH">Suizo</option>
+                                <option value="SY">Sirio</option>
+                                <option value="TW">Taiwanés</option>
+                                <option value="TJ">Tayiko</option>
+                                <option value="TZ">Tanzano</option>
+                                <option value="TH">Tailandés</option>
+                                <option value="TL">Timorense</option>
+                                <option value="TG">Togolés</option>
+                                <option value="TO">Tongano</option>
+                                <option value="TT">Trinitense</option>
+                                <option value="TN">Tunecino</option>
+                                <option value="TR">Turco</option>
+                                <option value="TM">Turcomano</option>
+                                <option value="TV">Tuvaluano</option>
+                                <option value="UG">Ugandés</option>
+                                <option value="UA">Ucraniano</option>
+                                <option value="AE">Emiratí</option>
+                                <option value="GB">Británico</option>
+                                <option value="US">Estadounidense</option>
+                                <option value="UY">Uruguayo</option>
+                                <option value="UZ">Uzbeko</option>
+                                <option value="VU">Vanuatuense</option>
+                                <option value="VA">Vaticano</option>
+                                <option value="VE">Venezolano</option>
+                                <option value="VN">Vietnamita</option>
+                                <option value="YE">Yemení</option>
+                                <option value="ZM">Zambiano</option>
+                                <option value="ZW">Zimbabuense</option>
+                            </select>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" id="boton-descarga">Descargar TXT</button>
+        </form>
+    </div>
+    <script src="/JS/script.js"></script>
+</body>
+</html>
